@@ -35,3 +35,10 @@ cat ДрузьяЧеловека - результат:
 2.
 mkdir newdir
 mv ДрузьяЧеловека newdir
+
+3.
+sudo apt update
+sudo apt-get install mysql-server
+sudo dpkg-reconfigure mysql-apt-config
+sudo apt-get update
+sudo apt-get install mysql-workbench-community
