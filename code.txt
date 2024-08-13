@@ -42,3 +42,7 @@ sudo apt-get install mysql-server
 sudo dpkg-reconfigure mysql-apt-config
 sudo apt-get update
 sudo apt-get install mysql-workbench-community
+
+4.
+sudo dpkg -i geany_1.27-1_amd64.deb
+sudo dpkg -r geany_1.27-1_amd64.deb
