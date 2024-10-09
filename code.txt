@@ -1,48 +1,41 @@
-1.
-cat > ДомашниеЖивотные - добавляю животных:
-собака
-кошка
-хомяк
-собака
-кошка
-хомяк
+1.# Создаем файлы с животными
+echo -e "Собаки\nКошки\nХомяки" > домашние_животные.txt
+echo -e "Лошади\nВерблюды\nОслы" > вьючные_животные.txt
 
-cat > ВьючныеЖивотные - добавляю животных:
-лошадь
-верблюд
-осел
-лошадь
-верблюд
-осел
+# Объединяем файлы
+cat домашние_животные.txt вьючные_животные.txt > друзья_человека.txt
 
-cat ДомашниеЖивотные ВьючныеЖивотные > res
-cat res
-mv res ДрузьяЧеловека
-cat ДрузьяЧеловека - результат:
-собака
-кошка
-хомяк
-собака�
-кошка
-хомяк
-лошадь
-верблюд
-осел
-лошад�ь
-верблюд
-осел
+# Просмотр содержимого
+cat друзья_человека.txt
 
-2.
-mkdir newdir
-mv ДрузьяЧеловека newdir
+# Переименовываем файл
+mv друзья_человека.txt Друзья_человека.txt
 
-3.
+
+2.# Создаем директорию
+mkdir питомник
+
+# Перемещаем файл в директорию
+mv Друзья_человека.txt питомник/
+
+
+3.# Установка MySQL
 sudo apt update
-sudo apt-get install mysql-server
-sudo dpkg-reconfigure mysql-apt-config
-sudo apt-get update
-sudo apt-get install mysql-workbench-community
+sudo apt install mysql-server
 
-4.
-sudo dpkg -i geany_1.27-1_amd64.deb
-sudo dpkg -r geany_1.27-1_amd64.deb
+# Проверка установки
+sudo systemctl start mysql
+sudo systemctl enable mysql
+
+
+4.# Установка deb-пакета
+sudo dpkg -i имя_пакета.deb
+
+# Удаление deb-пакета
+sudo dpkg -r имя_пакета
+
+# Чтобы установить зависимости, если они есть:
+sudo apt-get install -f
+
+
+5.history > history_commands.txt
